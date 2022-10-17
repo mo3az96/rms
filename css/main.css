@@ -149,6 +149,9 @@ input[type=number] {
 .header-a:hover {
   color: #187287;
 }
+.header-a.active {
+  opacity: 1;
+}
 .header-a.active::after {
   display: block;
 }
@@ -1109,6 +1112,114 @@ html[dir=ltr] .rms-btn:after {
   color: #000000;
   opacity: 0.7;
   margin: 0 0 15px;
+}
+
+.pricing-cont {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+}
+
+.pricing {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+  z-index: 5;
+}
+@media (max-width: 991px) {
+  .pricing {
+    flex-direction: column;
+  }
+}
+
+.pricing-item {
+  width: 100%;
+  max-width: 260px;
+  padding: 22px 28px 55px;
+  background: rgba(255, 255, 255, 0.15);
+  position: relative;
+  border-radius: 20px;
+  margin: 0 20px;
+}
+@media (max-width: 991px) {
+  .pricing-item {
+    margin: 30px auto;
+  }
+}
+.pricing-item:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid rgba(24, 114, 135, 0.5);
+  box-shadow: 0px 5px 40px rgba(1, 192, 158, 0.4);
+  content: "";
+  opacity: 0.15;
+  border-radius: 20px;
+}
+.pricing-item.best {
+  max-width: 360px;
+}
+.pricing-item .item-name {
+  display: flex;
+  align-items: center;
+  margin-top: 19px;
+}
+.pricing-item h2 {
+  font-weight: 600;
+  font-size: 24px;
+  color: #5ca293;
+  margin: 0;
+  line-height: 2;
+  text-transform: capitalize;
+}
+.pricing-item span {
+  font-weight: 400;
+  font-size: 16px;
+  color: #fff;
+  opacity: 0.4;
+}
+.pricing-item .item-feats {
+  margin: 0;
+}
+.pricing-item .item-feats li {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 2;
+  text-transform: capitalize;
+  color: #ffffff;
+}
+.pricing-item .item-feats li ~ li {
+  margin-top: 16px;
+}
+.pricing-item .item-feats li::before {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-margin-end: 11px;
+          margin-inline-end: 11px;
+}
+.pricing-item .available::before {
+  content: url(../images/available.svg);
+  background-color: #5ca293;
+}
+.pricing-item .not_available::before {
+  content: url(../images/not_available.svg);
+  background-color: #676767;
+}
+.pricing-item .item-btn {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateY(50%) translateX(-50%) perspective(1px);
+  z-index: 6;
 }
 
 footer {
