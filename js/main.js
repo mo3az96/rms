@@ -109,6 +109,14 @@ $(document).ready(function () {
       $(".footer-head").not(this).siblings().slideUp(500);
     });
   }
+  $(".password-icon").click(function () {
+    if ($(this).hasClass("active")) {
+      $(this).prevAll("input").attr("type", "password");
+    } else {
+      $(this).prevAll("input").attr("type", "text");
+    }
+    $(this).toggleClass("active");
+  });
 });
 
 var vsOpts = {
