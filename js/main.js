@@ -89,10 +89,23 @@ $(document).ready(function () {
   /* ~~~~~~~~~~~~~~~ Why Swiper ~~~~~~~~~~~~~~~ */
   var WhySwiper = new Swiper(".why-slider .swiper", {
     loop: true,
-    effect: "fade",
     pagination: {
       el: ".why-slider .swiper-pagination",
       clickable: true,
+    },
+    slidesPerView: 1,
+  });
+  /* ~~~~~~~~~~~~~~~ Feats Swiper ~~~~~~~~~~~~~~~ */
+  var FeatsSwiper = new Swiper(".feats-page-slider .swiper", {
+    loop: true,
+    effect: "fade",
+    pagination: {
+      el: ".feats-page-slider .swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".feats-page-slider .swiper-button-next",
+      prevEl: ".feats-page-slider .swiper-button-prev",
     },
     slidesPerView: 1,
   });
